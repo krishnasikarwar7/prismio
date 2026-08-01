@@ -19,9 +19,9 @@ export default function Navbar({
       {/* Logo & Brand Title */}
       <div className="flex items-center gap-2.5">
         <img
-          src="/favicon.png"
+          src={isDark ? "/logo-dark.png" : "/logo-light.png"}
           alt="Prismio"
-          className="h-12 w-12 object-contain transition-transform duration-200 hover:scale-105"
+          className="h-9 w-9 object-contain"
         />
         <span
           className={`text-[15px] font-semibold tracking-tight ${isDark ? 'text-[#FAFAFA]' : 'text-[#111827]'
