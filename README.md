@@ -25,21 +25,6 @@ Built with React, Vite, Monaco Editor, and Tailwind CSS.
 
 ---
 
-## 📸 Preview
-
-> Add screenshots here after deployment.
-
-Example:
-
-```
-/screenshots
-├── dark.png
-├── light.png
-├── export-modal.png
-```
-
----
-
 ## 🚀 Live Demo
 
 Coming Soon
@@ -132,7 +117,7 @@ npm run build
 
 ## 🗺️ Roadmap
 
-### Version 1.1
+### Version 1
 
 - SVG export
 - PDF export
@@ -142,13 +127,7 @@ npm run build
 - Line highlighting
 - Code padding presets
 
-### Version 1.2
-
-- GitHub Gist import
-- Shareable links
-- User presets
-- Custom themes
-- Keyboard shortcuts
+### Version 2 (soon)
 
 ---
 
