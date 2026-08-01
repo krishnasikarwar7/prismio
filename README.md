@@ -1,39 +1,173 @@
-# Prismio — Frontend (Phase 1)
+# Prismio
 
-Beautiful, customizable code screenshots. Frontend-only prototype built with React, Vite, and Tailwind CSS.
+Beautiful code. Instantly.
 
-## Getting started
+Prismio is a modern code screenshot generator that helps developers create clean, customizable, and professional-looking code snippets for documentation, social media, blogs, presentations, and portfolios.
+
+Built with React, Vite, Monaco Editor, and Tailwind CSS.
+
+---
+
+## ✨ Features
+
+- 🎨 Multiple syntax highlighting themes
+- 💻 Monaco Editor (VS Code-like editing experience)
+- 🌗 Light & Dark mode
+- 🌈 Beautiful customizable backgrounds
+- 🖥️ macOS, Windows, Browser & Minimal window frames
+- 🔤 Multiple font options
+- 📋 One-click Copy Code
+- 🖼️ One-click Copy Image
+- 📤 Export as PNG
+- 🌍 Support for multiple programming languages
+- ⚡ Fast, responsive and lightweight
+- 📱 Responsive interface
+
+---
+
+## 📸 Preview
+
+> Add screenshots here after deployment.
+
+Example:
+
+```
+/screenshots
+├── dark.png
+├── light.png
+├── export-modal.png
+```
+
+---
+
+## 🚀 Live Demo
+
+Coming Soon
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+- React
+- Vite
+- Tailwind CSS
+
+**Editor**
+
+- Monaco Editor
+
+**Libraries**
+
+- html-to-image
+- Lucide React
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   ├── controls/
+│   ├── editor/
+│   ├── navbar/
+│   ├── preview/
+│   ├── sidebar/
+│   └── windowFrames/
+├── utils/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/prismio.git
+```
+
+Go into the project
+
+```bash
+cd prismio
+```
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Run locally
+
+```bash
 npm run dev
 ```
 
-Then open the printed local URL (typically `http://localhost:5173`).
-
-To create a production build:
+Build
 
 ```bash
 npm run build
-npm run preview
 ```
 
-## What's included
+---
 
-- Fixed navbar with logo, tagline, theme toggle, GitHub button, and a disabled Export button
-- Collapsible sidebar cards: Language, Theme, Background, Window Frame, Appearance
-- Monaco Editor with dynamic language + theme switching, adjustable font size, word wrap, no minimap
-- Live preview card that mirrors every control in real time (window frame, background, filename, language badge, styled code)
-- Three-column desktop layout (sidebar / editor / preview) that stacks on tablet and mobile
-- Five editor themes (VS Code Dark, Dracula, GitHub Dark, One Dark, Nord), six background presets, and four window frame styles (macOS, Windows, Browser, None)
-- Plain `useState` for all app state — no Redux/Zustand/Context
+## 🎯 Use Cases
 
-## Not included (by design, per Phase 1 scope)
+- Documentation
+- Technical Blogs
+- LinkedIn Posts
+- Twitter/X Posts
+- GitHub README Images
+- Tutorials
+- Presentations
+- Portfolio Projects
 
-Backend, auth, database, real API calls, image export, file uploads, AI features.
+---
 
-## Notes for Phase 2
+## 🗺️ Roadmap
 
-- Wire the Export button to actual image generation (e.g. `html-to-image` or `dom-to-image`) once ready
-- The "None" window frame renders a plain filename header above the code — remove that header if a fully bare card is preferred
-- The theme toggle currently swaps the app chrome between dark/light via CSS variables; the code editor/preview themes are independent of this and always follow the selected Editor Theme
+### Version 1.1
+
+- SVG export
+- PDF export
+- Auto language detection
+- Drag & Drop files
+- Aspect ratio presets
+- Line highlighting
+- Code padding presets
+
+### Version 1.2
+
+- GitHub Gist import
+- Shareable links
+- User presets
+- Custom themes
+- Keyboard shortcuts
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and feature requests are welcome.
+
+Feel free to open an issue or submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Krishna Sikarwar**
+
+If you found Prismio useful, consider giving the repository a ⭐.
