@@ -25,9 +25,9 @@ Built with React, Vite, Monaco Editor, and Tailwind CSS.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Deployment
 
-Coming Soon
+- https://prismio.vercel.app
 
 ---
 
