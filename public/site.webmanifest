@@ -1,0 +1,16 @@
+{
+    "name": "Prismio",
+    "short_name": "Prismio",
+    "description": "Beautiful Code Screenshot Generator",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#111111",
+    "theme_color": "#111111",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
