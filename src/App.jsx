@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 import { ChevronDown, ChevronUp, Settings2 } from 'lucide-react'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
+import Footer from './components/footer/Footer'
 import CodeEditor from './components/editor/CodeEditor'
 import PreviewCard from './components/preview/PreviewCard'
 import ExportModal from './components/controls/ExportModal'
@@ -256,6 +257,8 @@ export default function App() {
           />
         </div>
       </main>
+
+      <Footer />
 
       {/* Overlays & Modals */}
       <ExportModal
