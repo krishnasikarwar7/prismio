@@ -40,7 +40,7 @@ export default function WindowFrameSelector({ value, onChange, isDark }) {
             key={frame.id}
             disabled={disabled}
             onClick={() => !disabled && onChange(frame.id)}
-            className={`relative flex items-center justify-center h-10 w-full rounded-lg px-3 py-2 text-[13px] font-medium text-center transition-all duration-200 ease-out border select-none ${buttonStyleClass}`}
+            className={`relative flex items-center justify-center min-h-[44px] w-full rounded-lg px-3 py-2 text-[13px] font-medium text-center transition-all duration-200 ease-out border select-none ${buttonStyleClass}`}
           >
             {frame.label}
           </button>

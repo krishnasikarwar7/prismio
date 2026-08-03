@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { ChevronDown, ChevronUp, Settings2 } from 'lucide-react'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import CodeEditor from './components/editor/CodeEditor'
@@ -35,6 +36,7 @@ export default function App() {
   const [padding, setPadding] = useState(48)
   const [radius, setRadius] = useState(12)
   const [fontSize, setFontSize] = useState(14)
+  const [isCustomizeOpen, setIsCustomizeOpen] = useState(false)
 
   // Font state — restored from localStorage
   const [fontId, setFontId] = useState(() => getPersistedFontPrefs().fontId)
@@ -171,9 +173,24 @@ export default function App() {
         onExportClick={() => setShowExportModal(true)}
       />
 
-      <main className="flex h-screen w-full flex-col pt-14 lg:flex-row lg:overflow-hidden bg-base-bg transition-colors duration-200">
+      <main className="flex min-h-screen lg:h-screen w-full flex-col pt-14 lg:flex-row lg:overflow-hidden bg-base-bg transition-colors duration-200">
         {/* Sidebar */}
-        <div className="w-full lg:w-[20%] lg:h-full lg:shrink-0 flex flex-col border-r border-base-border bg-base-surface transition-colors duration-200">
+        <div className="order-3 lg:order-1 w-full lg:w-[20%] lg:h-full lg:shrink-0 flex flex-col border-r border-base-border bg-base-surface transition-colors duration-200">
+          {/* Mobile Customize Toggle */}
+          <button
+            onClick={() => setIsCustomizeOpen(!isCustomizeOpen)}
+            className={`lg:hidden flex items-center justify-between w-full p-4 border-t border-b border-base-border transition-colors ${
+              isDark ? 'bg-[#1C1C1E] text-white hover:bg-[#242426]' : 'bg-white text-gray-900 hover:bg-gray-50'
+            }`}
+          >
+            <div className="flex items-center gap-2 font-medium">
+              <Settings2 size={18} />
+              <span>Customize</span>
+            </div>
+            {isCustomizeOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+          </button>
+          
+          <div className={`${isCustomizeOpen ? 'block' : 'hidden'} lg:block lg:h-full overflow-y-auto`}>
           <Sidebar
             isDark={isDark}
             language={languageId}
@@ -195,10 +212,11 @@ export default function App() {
             fontSize={fontSize}
             onFontSizeChange={setFontSize}
           />
+          </div>
         </div>
 
         {/* Editor */}
-        <div className="w-full lg:w-[45%] lg:h-full lg:shrink-0 flex flex-col border-r border-base-border bg-base-bg/30 pt-4 lg:pt-5 px-3 lg:px-4 pb-4 lg:pb-5 transition-colors duration-200">
+        <div className="order-1 lg:order-2 w-full h-[55vh] lg:h-full lg:w-[45%] lg:shrink-0 flex flex-col border-r border-base-border bg-base-bg/30 pt-4 lg:pt-5 px-3 lg:px-4 pb-4 lg:pb-5 transition-colors duration-200">
           <div
             className={`flex h-full w-full flex-col overflow-hidden rounded-2xl shadow-elevated transition-all duration-300 hover:shadow-2xl border ${
               isDark
@@ -221,7 +239,7 @@ export default function App() {
         </div>
 
         {/* Preview */}
-        <div className="w-full lg:w-[35%] lg:h-full lg:shrink-0 flex flex-col bg-base-bg/50 pt-4 lg:pt-5 px-3 lg:px-4 pb-4 lg:pb-5 relative items-center justify-center transition-colors duration-200">
+        <div className="order-2 lg:order-3 w-full h-[40vh] lg:h-full lg:w-[35%] lg:shrink-0 flex flex-col bg-base-bg/50 pt-4 lg:pt-5 px-3 lg:px-4 pb-4 lg:pb-5 relative items-center justify-center transition-colors duration-200">
           <PreviewCard
             canvasRef={previewCanvasRef}
             isDark={isDark}

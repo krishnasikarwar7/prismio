@@ -77,7 +77,7 @@ export default function AppearanceControls({
               key={p}
               type="button"
               onClick={() => onPaddingChange(p)}
-              className={`flex-1 rounded-lg py-1.5 text-[12px] font-medium transition-all duration-200 ease-out active:scale-[0.97] border cursor-pointer ${
+              className={`flex-1 rounded-lg min-h-[44px] py-1.5 text-[12px] font-medium transition-all duration-200 ease-out active:scale-[0.97] border cursor-pointer ${
                 padding === p
                   ? 'bg-[#A35E47] border-[#A35E47] text-[#FFFFFF] shadow-sm font-semibold'
                   : isDarkMode

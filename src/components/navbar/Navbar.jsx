@@ -11,7 +11,7 @@ export default function Navbar({
 }) {
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between border-b px-4 backdrop-blur-md sm:px-6 transition-colors duration-200 ${isDark
+      className={`fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between border-b px-2 sm:px-4 lg:px-6 backdrop-blur-md transition-colors duration-200 ${isDark
         ? 'border-[rgba(255,255,255,0.08)] bg-[#18181B]/80 text-[#FAFAFA]'
         : 'border-[#E5E7EB] bg-[#FFFFFF]/80 text-[#111827]'
         }`}
@@ -58,7 +58,7 @@ export default function Navbar({
           type="button"
           onClick={onCopyCode}
           title="Copy the current source code"
-          className={`flex h-8 items-center gap-1.5 rounded-lg border px-3 text-[13px] font-medium transition-all duration-200 ease-out active:scale-95 cursor-pointer ${isDark
+          className={`flex h-8 items-center gap-1.5 rounded-lg border px-2 sm:px-3 text-[13px] font-medium transition-all duration-200 ease-out active:scale-95 cursor-pointer ${isDark
             ? 'border-[rgba(255,255,255,0.08)] bg-[#1C1C1E] text-[#F5F5F5] hover:bg-[#242426] hover:border-white/15'
             : 'border-[#E5E7EB] bg-[#FFFFFF] text-[#374151] hover:bg-[#F8F8F8] hover:border-[#D1D5DB]'
             }`}
@@ -77,7 +77,7 @@ export default function Navbar({
           onClick={onCopyImage}
           disabled={isCopyingImage}
           title="Copy the preview as a PNG"
-          className={`flex h-8 items-center gap-1.5 rounded-lg border px-3 text-[13px] font-medium transition-all duration-200 ease-out active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed ${isDark
+          className={`flex h-8 items-center gap-1.5 rounded-lg border px-2 sm:px-3 text-[13px] font-medium transition-all duration-200 ease-out active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed ${isDark
             ? 'border-[rgba(255,255,255,0.08)] bg-[#1C1C1E] text-[#F5F5F5] hover:bg-[#242426] hover:border-white/15'
             : 'border-[#E5E7EB] bg-[#FFFFFF] text-[#374151] hover:bg-[#F8F8F8] hover:border-[#D1D5DB]'
             }`}
@@ -97,10 +97,10 @@ export default function Navbar({
           type="button"
           onClick={onExportClick}
           title="Download your code image"
-          className="flex h-8 items-center gap-1.5 rounded-lg bg-[#A35E47] px-3.5 text-[13px] font-medium text-white transition-all duration-200 ease-out hover:bg-[#A35E47]/90 active:scale-95 cursor-pointer shadow-sm"
+          className="flex h-8 items-center gap-1.5 rounded-lg bg-[#A35E47] px-2 sm:px-3.5 text-[13px] font-medium text-white transition-all duration-200 ease-out hover:bg-[#A35E47]/90 active:scale-95 cursor-pointer shadow-sm"
         >
           <Download size={14} className="shrink-0" />
-          <span>Export</span>
+          <span className="hidden sm:inline">Export</span>
         </button>
       </div>
     </header>
