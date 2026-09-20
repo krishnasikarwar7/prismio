@@ -26,7 +26,7 @@ export default function Footer() {
           </a>
           <span className="text-text-muted/30 select-none">&bull;</span>
           <a
-            href="https://krishnasikarwar-portfolio.vercel.app"
+            href="https://krishnasikarwar.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors duration-150"
